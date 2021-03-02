@@ -14,8 +14,8 @@ availability_zones = [
 
 #node group details
 ami_type = "AL2_x86_64"
-disk_size = "5"
-instance_types = ["t3.micro"]
+disk_size = "20"
+instance_types = ["t3.medium"]
 desired_size = "1"
 max_size = "1"
 min_size = "1"
