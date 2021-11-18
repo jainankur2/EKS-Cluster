@@ -1,10 +1,5 @@
-# Terraform state
-bucket = "eks-dev-ankur"
-key = "terraform_state/infrastructure/dev/terraform.tfstate"
-region = "us-east-2"
-
 #Environment information
-dns_name = "fynd"
+dns_name = "IHS-Markit"
 account_environment = "dev"
 availability_zones = [
   "us-east-2a",

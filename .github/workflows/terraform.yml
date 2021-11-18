@@ -29,7 +29,7 @@ jobs:
 
       - name: Terraform init
         id: init
-        run: terraform init
+        run: terraform init -backend-config=environment/dev.backend.tfvars
 
       - name: Terraform validate
         id: validate
@@ -37,12 +37,12 @@ jobs:
 
       - name: Terraform plan
         id: plan
-        run: terraform plan -no-color
+        run: terraform plan -var-file=environment/dev.tfvars -no-color
 
       - name: Terraform apply
         id: apply
         if: github.ref == 'refs/heads/master' && github.event_name == 'push'
-        run: terraform apply -auto-approve -input=false
+        run: terraform apply -var-file=environment/dev.tfvars -auto-approve -input=false
 
       
 
