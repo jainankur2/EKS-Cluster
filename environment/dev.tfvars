@@ -1,4 +1,5 @@
 #Environment information
+region = "us-east-2"
 dns_name = "IHS-Markit"
 account_environment = "dev"
 availability_zones = [
